@@ -9,10 +9,10 @@ import Content from "../Content";
 
 const App = () => {
 
-    const { App } = classes;
+    const { app_wrap } = classes;
 
     return (
-        <div className={ App }>
+        <div className={ app_wrap }>
             <Header/>
             <Sidebar/>
             <Content/>

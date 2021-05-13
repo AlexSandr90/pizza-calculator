@@ -1,3 +1,40 @@
 .header {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  grid-template-columns: repeat(6, 1fr);
 
+  max-width: 1980px;
+  width: 100%;
+  min-height: 50px;
+  background-color: var(--main-bg-header);
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+}
+
+.header__nav_wrap {
+  grid-column: 2 / 6;
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  justify-content: space-around;
+  li {
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-family: var(--main-ff-lato-reg);
+      letter-spacing: 1.5px;
+      color: var(--main-font-color);
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: var(--main-font-color-hover);
+      }
+    }
+  }
 }
