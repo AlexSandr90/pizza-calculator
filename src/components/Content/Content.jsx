@@ -5,17 +5,26 @@ import classes from './content.module.scss';
 
 const Content = () => {
 
-    const { main_content } = classes;
+    const {
+        calc,
+        calcTable,
+        calcHeader,
+        mainContent
+    } = classes;
 
     return (
-        <main className={ main_content }>
-            <h3>Калькулятор стоимости пиццы</h3>
-            <div>
-                <label htmlFor='base' >Размер основы</label>
-                <input type="number" id='base'/>
-            </div>
-            <div>
-                <ul>
+        <main className={mainContent}>
+            <div className={calc}>
+                <h3>Калькулятор стоимости пиццы</h3>
+                <div className={ calcHeader }>
+                    <span>Размер основы</span>
+                    <select name="radius" id="radius">
+                        <option value="35">35 см</option>
+                        <option value="55" selected>55 см</option>
+                        <option value="75">75 см</option>
+                    </select>
+                </div>
+                <ul className={ calcTable }>
                     <li>
                         <span>Ингредиент</span>
                         <span>Цена за порцию, грн</span>
@@ -26,9 +35,9 @@ const Content = () => {
                         <span>Ветчина</span>
                         <span>15</span>
                         <span>50</span>
-                        <select name="" id="">
+                        <select name="ham" id="ham">
                             <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="2" selected>2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -38,9 +47,9 @@ const Content = () => {
                         <span>Ананас</span>
                         <span>12</span>
                         <span>50</span>
-                        <select name="" id="">
+                        <select name="pineapple" id="pineapple">
                             <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="2" selected>2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -50,9 +59,9 @@ const Content = () => {
                         <span>Сыр</span>
                         <span>18</span>
                         <span>100</span>
-                        <select name="" id="">
+                        <select name="cheese" id="cheese">
                             <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="2" selected>2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>

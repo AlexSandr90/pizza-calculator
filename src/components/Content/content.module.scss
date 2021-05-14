@@ -1,6 +1,23 @@
-.main_content {
+.mainContent {
   display: grid;
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
   //background-color: #8940ff;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    align-self: center;
+  }
+}
+
+.calcHeader {
+
+}
+
+.calcTable {
+
 }
