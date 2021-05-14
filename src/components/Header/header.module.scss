@@ -15,6 +15,22 @@
   top: 0;
 }
 
+.logo_block {
+  grid-column: 1 / span 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}
+
 .header__nav_wrap {
   grid-column: 2 / 6;
   display: flex;

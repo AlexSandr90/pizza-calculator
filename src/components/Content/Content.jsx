@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../../utils/variables.css';
 import classes from './content.module.scss';
 
 const Content = () => {
@@ -8,6 +9,7 @@ const Content = () => {
 
     return (
         <main className={ main_content }>
+            <h3>Калькулятор стоимости пиццы</h3>
             <div>
                 <label htmlFor='base' >Размер основы</label>
                 <input type="number" id='base'/>
