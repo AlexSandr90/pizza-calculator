@@ -2,13 +2,6 @@ import React from 'react';
 
 import '../../utils/variables.css';
 import classes from './header.module.scss';
-import {
-    Menu,
-    About,
-    Contacts,
-    Delivery,
-    Calculator
-} from '../Pages'
 
 const Header = () => {
 

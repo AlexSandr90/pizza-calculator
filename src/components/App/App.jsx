@@ -7,6 +7,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import Sidebar from "../Sidebar";
 import Content from "../Content";
+
 import {
     Route,
     BrowserRouter
@@ -22,7 +23,10 @@ import {
 
 const App = () => {
 
-    const {app_wrap, mainContent} = classes;
+    const {
+        app_wrap,
+        mainContent
+    } = classes;
 
     return (
         <BrowserRouter>
