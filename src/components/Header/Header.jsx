@@ -2,6 +2,13 @@ import React from 'react';
 
 import '../../utils/variables.css';
 import classes from './header.module.scss';
+import {
+    Menu,
+    About,
+    Contacts,
+    Delivery,
+    Calculator
+} from '../Pages'
 
 const Header = () => {
 
@@ -21,11 +28,11 @@ const Header = () => {
                 </a>
             </div>
             <nav className={ header__nav_wrap }>
-                <li><a href="/">Menu</a></li>
-                <li><a href="/">Delivery</a></li>
-                <li><a href="/">About Me</a></li>
-                <li><a href="/">Calculator</a></li>
-                <li><a href="/">Contacts</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/delivery">Delivery</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/calculator">Calculator</a></li>
+                <li><a href="/contacts">Contacts</a></li>
             </nav>
         </header>
     )
