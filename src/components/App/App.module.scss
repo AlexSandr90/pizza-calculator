@@ -7,3 +7,9 @@
   grid-template-rows: 1fr 9fr 1fr;
 }
 
+.mainContent {
+  display: grid;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+

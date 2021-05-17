@@ -28,6 +28,7 @@ const Header = () => {
                 </a>
             </div>
             <nav className={ header__nav_wrap }>
+                <li><a href="/">Home</a></li>
                 <li><a href="/menu">Menu</a></li>
                 <li><a href="/delivery">Delivery</a></li>
                 <li><a href="/about">About Me</a></li>
