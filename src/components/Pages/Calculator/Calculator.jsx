@@ -14,7 +14,9 @@ import { menuFields } from "../../../state";
 const Calculator = () => {
 
     const [ orderPrice, setOrderPrice ] = useState(0);
-    const [ pizzaBase, setPizzaBase ] = useState(0);
+    const [ pizzaBase, setPizzaBase ] = useState(65);
+    const [ pizzaRadius, setPizzaSize ] = useState();
+
 
     const {
         btn,
@@ -49,36 +51,31 @@ const Calculator = () => {
 
     const handleCalculateSum = () => {
         const numberHam = document.getElementById('ham').value;
-        const pizzaBaseSIze = document.getElementById('radius').value;
         const numberCheese = document.getElementById('cheese').value;
         const numberPineapple = document.getElementById('pineapple').value;
 
-        let pizzaBaseCost;
-
-        console.log('pizzaBaseSIze: ', pizzaBaseSIze);
-
-        if ( pizzaBaseSIze === '35' ) {
-            pizzaBaseCost = SMALL_BASE;
-            setPizzaBase(SMALL_BASE);
-        }
-        if ( pizzaBaseSIze === '55' ) {
-            pizzaBaseCost = MEDIUM_BASE;
-            setPizzaBase(MEDIUM_BASE)
-        }
-        if ( pizzaBaseSIze === '75' ) {
-            pizzaBaseCost = BIG_BASE;
-            setPizzaBase(BIG_BASE)
-        }
-
-        console.log('pizzaBaseCost: ', pizzaBaseCost);
         console.log(numberHam);
-
         console.log('click');
 
-        const result = pizzaBaseCost + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
+        const result = pizzaBase + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
 
         setOrderPrice(result);
+    };
 
+    const handleCost = (event, setHook) => {
+        if ( event.target.value === '35' ) {
+            setHook(SMALL_BASE);
+        }
+
+        if ( event.target.value === '55' ) {
+            setHook(MEDIUM_BASE)
+        }
+
+        if ( event.target.value === '75' ) {
+            setHook(BIG_BASE)
+        }
+
+        return event.target.value;
     };
 
     return (
@@ -87,7 +84,7 @@ const Calculator = () => {
 
             <div className={ calcHeader }>
                 <span>Размер основы</span>
-                <select name="radius" id="radius">
+                <select name="radius" onChange={event => handleCost(event, setPizzaBase)}>
                     <option value={35}>35 см</option>
                     <option value={55} selected>55 см</option>
                     <option value={75}>75 см</option>
