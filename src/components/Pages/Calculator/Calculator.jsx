@@ -58,13 +58,16 @@ const Calculator = () => {
         console.log('pizzaBaseSIze: ', pizzaBaseSIze);
 
         if ( pizzaBaseSIze === '35' ) {
-            pizzaBaseCost = SMALL_BASE
+            pizzaBaseCost = SMALL_BASE;
+            setPizzaBase(SMALL_BASE);
         }
         if ( pizzaBaseSIze === '55' ) {
-            pizzaBaseCost = MEDIUM_BASE
+            pizzaBaseCost = MEDIUM_BASE;
+            setPizzaBase(MEDIUM_BASE)
         }
         if ( pizzaBaseSIze === '75' ) {
-            pizzaBaseCost = BIG_BASE
+            pizzaBaseCost = BIG_BASE;
+            setPizzaBase(BIG_BASE)
         }
 
         console.log('pizzaBaseCost: ', pizzaBaseCost);
@@ -74,7 +77,7 @@ const Calculator = () => {
 
         const result = pizzaBaseCost + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
 
-        return setOrderPrice(result);
+        setOrderPrice(result);
 
     };
 
@@ -89,6 +92,10 @@ const Calculator = () => {
                     <option value={55} selected>55 см</option>
                     <option value={75}>75 см</option>
                 </select>
+
+                <span>
+                    Цена: {pizzaBase} грн
+                </span>
             </div>
 
             <ul className={ calcTable }>
