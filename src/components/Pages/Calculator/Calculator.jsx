@@ -77,6 +77,7 @@ const Calculator = () => {
         // const result = pizzaBase + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
 
         // console.log(numberHam);
+
         console.log('click');
         console.log('pizzaItem: ', pizzaItem);
 
