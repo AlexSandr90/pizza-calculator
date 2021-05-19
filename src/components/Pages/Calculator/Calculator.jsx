@@ -16,9 +16,9 @@ const Calculator = () => {
     const [ orderPrice, setOrderPrice ] = useState(0);
     const [ pizzaBase, setPizzaBase ] = useState(65);
     const [ pizzaItem, setPizzaItem ] = useState(0);
-    const [ useHam, setUseHam ] = useState(0);
-    const [ usePineapple, setUsePineapple ] = useState(0);
-    const [ useCheese, setUseCheese ] = useState(0);
+    const [ useHam, setUseHam ] = useState(2);
+    const [ usePineapple, setUsePineapple ] = useState(2);
+    const [ useCheese, setUseCheese ] = useState(2);
 
     const {
         btn,
@@ -45,6 +45,7 @@ const Calculator = () => {
         return event.target.value;
     };
 
+
     const listItem = menuFields.map((item) => {
 
         const {
@@ -58,8 +59,6 @@ const Calculator = () => {
 
         return (
             <Ingredients
-                value={pizzaItem}
-                onChange={event => handleCost(event, setPizzaItem(pizzaItem))}
                 key={ id }
                 since={ since }
                 selectId={ selectId }
