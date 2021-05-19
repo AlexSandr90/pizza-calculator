@@ -15,8 +15,10 @@ const Calculator = () => {
 
     const [ orderPrice, setOrderPrice ] = useState(0);
     const [ pizzaBase, setPizzaBase ] = useState(65);
-    const [ pizzaRadius, setPizzaSize ] = useState();
-
+    const [ pizzaItem, setPizzaItem ] = useState(0);
+    const [ useHam, setUseHam ] = useState(0);
+    const [ usePineapple, setUsePineapple ] = useState(0);
+    const [ useCheese, setUseCheese ] = useState(0);
 
     const {
         btn,
@@ -26,41 +28,6 @@ const Calculator = () => {
         calcHeader,
         priceBlock
     } = classes;
-
-    const listItem = menuFields.map(item => {
-        const {
-            id,
-            since,
-            selectId,
-            ingredient,
-            priceToOne,
-            selectName
-        } = item;
-
-        return (
-            <Ingredients
-                key={ id }
-                since={ since }
-                selectId={ selectId }
-                ingredient={ ingredient }
-                priceToOne={ priceToOne }
-                selectName={ selectName }
-            />
-        )
-    });
-
-    const handleCalculateSum = () => {
-        const numberHam = document.getElementById('ham').value;
-        const numberCheese = document.getElementById('cheese').value;
-        const numberPineapple = document.getElementById('pineapple').value;
-
-        console.log(numberHam);
-        console.log('click');
-
-        const result = pizzaBase + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
-
-        setOrderPrice(result);
-    };
 
     const handleCost = (event, setHook) => {
         if ( event.target.value === '35' ) {
@@ -77,6 +44,48 @@ const Calculator = () => {
 
         return event.target.value;
     };
+
+    const listItem = menuFields.map((item) => {
+
+        const {
+            id,
+            since,
+            selectId,
+            ingredient,
+            priceToOne,
+            selectName
+        } = item;
+
+        return (
+            <Ingredients
+                value={pizzaItem}
+                onChange={event => handleCost(event, setPizzaItem(pizzaItem))}
+                key={ id }
+                since={ since }
+                selectId={ selectId }
+                ingredient={ ingredient }
+                priceToOne={ priceToOne }
+                selectName={ selectName }
+            />
+        )
+    });
+
+    const handleCalculateSum = () => {
+        // const numberHam = document.getElementById('ham').value;
+        // const numberCheese = document.getElementById('cheese').value;
+        // const numberPineapple = document.getElementById('pineapple').value;
+        // const result = pizzaBase + (numberHam * 15) + (numberCheese * 18) + (numberPineapple * 12);
+
+        // console.log(numberHam);
+        console.log('click');
+        console.log('pizzaItem: ', pizzaItem);
+
+        const result = pizzaBase + (useHam * 15) + (useCheese * 18) + (usePineapple * 12);
+
+        setOrderPrice(result);
+    };
+
+
 
     return (
         <div className={calc}>
@@ -103,7 +112,61 @@ const Calculator = () => {
                     <span>Количество порций</span>
                 </li>
 
-                { listItem }
+                <li key={ menuFields[0].id } className={ listItem }>
+                    <span>{ menuFields[0].ingredient }</span>
+                    <span>{ menuFields[0].priceToOne }</span>
+                    <span>{ menuFields[0].since }</span>
+                    <select
+                        name={ menuFields[0].selectName }
+                        id={ menuFields[0].selectId }
+                        value={ useHam }
+                        onChange={ event => setUseHam(event.target.value) }
+                    >
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </li>
+
+                <li key={ menuFields[1].id } className={ listItem }>
+                    <span>{ menuFields[1].ingredient }</span>
+                    <span>{ menuFields[1].priceToOne }</span>
+                    <span>{ menuFields[1].since }</span>
+                    <select
+                        name={ menuFields[1].selectName }
+                        id={ menuFields[1].selectId }
+                        value={ usePineapple }
+                        onChange={ event => setUsePineapple(event.target.value) }
+                    >
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </li>
+
+                <li key={ menuFields[2].id } className={ listItem }>
+                    <span>{ menuFields[2].ingredient }</span>
+                    <span>{ menuFields[2].priceToOne }</span>
+                    <span>{ menuFields[2].since }</span>
+                    <select
+                        name={ menuFields[2].selectName }
+                        id={ menuFields[2].selectId }
+                        value={ useCheese }
+                        onChange={ event => setUseCheese(event.target.value) }
+                    >
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </li>
+
+                {/*{ listItem }*/}
 
             </ul>
 

@@ -1,6 +1,4 @@
 
-
-
 export const menuFields = [
     {
         id: 0,
