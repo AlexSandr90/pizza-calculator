@@ -13,10 +13,10 @@ import { menuFields } from "../../../state";
 
 const Calculator = () => {
 
+    // const [ pizzaItem, setPizzaItem ] = useState(0);
+    const [ useHam, setUseHam ] = useState(2);
     const [ orderPrice, setOrderPrice ] = useState(0);
     const [ pizzaBase, setPizzaBase ] = useState(65);
-    const [ pizzaItem, setPizzaItem ] = useState(0);
-    const [ useHam, setUseHam ] = useState(2);
     const [ usePineapple, setUsePineapple ] = useState(2);
     const [ useCheese, setUseCheese ] = useState(2);
 
@@ -78,7 +78,7 @@ const Calculator = () => {
         // console.log(numberHam);
 
         console.log('click');
-        console.log('pizzaItem: ', pizzaItem);
+        // console.log('pizzaItem: ', pizzaItem);
 
         const result = pizzaBase + (useHam * 15) + (useCheese * 18) + (usePineapple * 12);
 

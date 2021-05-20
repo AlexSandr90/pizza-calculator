@@ -15,7 +15,7 @@
   top: 0;
 }
 
-.logo_block {
+.logoBlock {
   grid-column: 1 / span 1;
 
   display: flex;
@@ -31,7 +31,7 @@
   }
 }
 
-.header__nav_wrap {
+.headerNavWrap {
   grid-column: 2 / 6;
   display: flex;
   max-width: 900px;
@@ -50,6 +50,9 @@
 
       &:hover {
         color: var(--main-font-color-hover);
+      }
+      &.active {
+        color: #ccb861;
       }
     }
   }
