@@ -52,7 +52,7 @@
         color: var(--main-font-color-hover);
       }
       &.active {
-        color: #ccb861;
+        color: var(--font-color-active);
       }
     }
   }

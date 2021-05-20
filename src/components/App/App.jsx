@@ -10,7 +10,7 @@ import Content from "../Content";
 
 import {
     Route,
-    BrowserRouter
+    BrowserRouter as Router
 } from "react-router-dom";
 
 import {
@@ -29,25 +29,25 @@ const App = () => {
     } = classes;
 
     return (
-        <BrowserRouter>
+        <Router>
             <div className={app_wrap}>
                 <Header/>
                 <Sidebar/>
 
                 <main className={ mainContent }>
-                    {/*<Route component={Content} path='/'/>*/}
 
-                    <Route path='/menu' component={Menu}/>
-                    <Route path='/delivery' component={Delivery}/>
-                    <Route path='/about' component={About}/>
-                    <Route path='/calculator' component={Calculator}/>
-                    <Route path='/contacts' component={Contacts}/>
+                    <Route path='/menu' component={Menu} exact/>
+                    <Route path='/delivery' component={Delivery} exact/>
+                    <Route path='/about' component={About} exact/>
+                    <Route path='/calculator' component={Calculator} eact/>
+                    <Route path='/contacts' component={Contacts} exact/>
+                    <Route path='/' component={Content} exact/>
 
                 </main>
                 {/*<Content/>*/}
                 <Footer/>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 };
 

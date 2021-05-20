@@ -25,22 +25,40 @@ const Header = () => {
             </div>
             <nav className={ headerNavWrap }>
                 <li>
-                    <NavLink to="/" activeClassName={active}>Home</NavLink>
+                    <NavLink to="/"
+                             exact
+                             activeClassName={active}
+                    >Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/menu" activeClassName={active}>Menu</NavLink>
+                    <NavLink to="/menu"
+                             exact
+                             activeClassName={active}
+                    >Menu</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/delivery" activeClassName={active}>Delivery</NavLink>
+                    <NavLink to="/delivery"
+                             exact
+                             activeClassName={active}
+                    >Delivery</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" activeClassName={active}>About Me</NavLink>
+                    <NavLink to="/about"
+                             exact
+                             activeClassName={active}
+                    >About Me</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/calculator" activeClassName={active}>Calculator</NavLink>
+                    <NavLink to="/calculator"
+                             exact
+                             activeClassName={active}
+                    >Calculator</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contacts" activeClassName={active}>Contacts</NavLink>
+                    <NavLink to="/contacts"
+                             exact
+                             activeClassName={active}
+                    >Contacts</NavLink>
                 </li>
             </nav>
         </header>
