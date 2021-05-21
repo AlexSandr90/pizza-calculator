@@ -32,7 +32,7 @@ const App = () => {
         <Router>
             <div className={app_wrap}>
                 <Header/>
-                <Sidebar/>
+                {/*<Sidebar/>*/}
 
                 <main className={ mainContent }>
 
