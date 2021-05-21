@@ -1,5 +1,9 @@
 import {
+    menuItems,
     menuFields
 } from './state';
 
-export { menuFields };
+export {
+    menuItems,
+    menuFields
+};

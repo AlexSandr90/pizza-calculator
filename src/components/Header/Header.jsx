@@ -2,8 +2,8 @@ import React from 'react';
 
 import '../../utils/variables.css';
 import classes from './header.module.scss';
-import {NavLink} from "react-router-dom";
-
+import MenuItem from "./MenuItem/MenuItem";
+import { menuItems } from '../../state';
 
 const Header = () => {
 
@@ -13,6 +13,22 @@ const Header = () => {
         logoBlock,
         headerNavWrap
     } = classes;
+
+    const headerMenu = menuItems.map(menuItem => {
+        const {
+            id,
+            path,
+            menuItemName
+        } = menuItem;
+        return (
+            <MenuItem
+                key={ id }
+                path={ path }
+                menuItemName={ menuItemName }
+                activeClassName={ `${active}` }
+            />
+        )
+    });
 
     return (
         <header className={ header }>
@@ -24,42 +40,7 @@ const Header = () => {
                 </a>
             </div>
             <nav className={ headerNavWrap }>
-                <li>
-                    <NavLink to="/"
-                             exact
-                             activeClassName={active}
-                    >Home</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/menu"
-                             exact
-                             activeClassName={active}
-                    >Menu</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/delivery"
-                             exact
-                             activeClassName={active}
-                    >Delivery</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about"
-                             exact
-                             activeClassName={active}
-                    >About Me</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/calculator"
-                             exact
-                             activeClassName={active}
-                    >Calculator</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contacts"
-                             exact
-                             activeClassName={active}
-                    >Contacts</NavLink>
-                </li>
+                { headerMenu }
             </nav>
         </header>
     )

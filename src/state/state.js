@@ -25,3 +25,42 @@ export const menuFields = [
         selectName: 'cheese'
     }
 ];
+
+export const menuItems = [
+    {
+        id: 0,
+        path: '',
+        menuItemName: 'Home',
+        activeClassName: 'active'
+    },
+    {
+        id: 1,
+        path: 'menu',
+        menuItemName: 'Menu',
+        activeClassName: 'active'
+    },
+    {
+        id: 2,
+        path: 'delivery',
+        menuItemName: 'Delivery',
+        activeClassName: 'active'
+    },
+    {
+        id: 3,
+        path: 'about',
+        menuItemName: 'About',
+        activeClassName: 'active'
+    },
+    {
+        id: 4,
+        path: 'calculator',
+        menuItemName: 'Calculator',
+        activeClassName: 'active'
+    },
+    {
+        id: 5,
+        path: 'contacts',
+        menuItemName: 'Contacts',
+        activeClassName: 'active'
+    }
+];
