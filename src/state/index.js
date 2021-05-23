@@ -1,9 +1,11 @@
 import {
     menuItems,
-    menuFields
+    menuFields,
+    productFields
 } from './state';
 
 export {
     menuItems,
-    menuFields
+    menuFields,
+    productFields
 };

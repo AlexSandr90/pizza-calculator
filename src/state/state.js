@@ -64,3 +64,90 @@ export const menuItems = [
         activeClassName: 'active'
     }
 ];
+
+export const productFields = [
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://static.1000.menu/img/content-v2/63/46/809/pitstsa-domashnyaya_1591686572_16_max.jpg',
+        productName: 'Пицца Домашняя',
+        productPrice: 275
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    },
+    {
+        id: 1,
+        path: '',
+        imgSrc: 'https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg',
+        productName: 'Пицца Пеперони',
+        productPrice: 250
+    }
+];
