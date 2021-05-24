@@ -11,7 +11,6 @@ const Content = props => {
 
         const {
             mainContent,
-            productCard,
         } = classes;
 
         const productCards = productFields.map(product => {
@@ -38,7 +37,6 @@ const Content = props => {
             <section className={mainContent}>
 
                 { productCards }
-
 
             </section>
         )

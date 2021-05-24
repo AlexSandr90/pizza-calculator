@@ -8,7 +8,7 @@ import {
     BIG_BASE,
     SMALL_BASE,
     MEDIUM_BASE
-} from "../../../utils/consants";
+} from "../../../utils/constants";
 import { menuFields } from "../../../state";
 
 const Calculator = () => {
