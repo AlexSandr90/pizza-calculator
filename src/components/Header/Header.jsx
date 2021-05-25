@@ -3,9 +3,8 @@ import React from 'react';
 import '../../utils/variables.css';
 import classes from './header.module.scss';
 import MenuItem from "./MenuItem/MenuItem";
-import { menuItems } from '../../state';
 
-const Header = () => {
+const Header = props => {
 
     const {
         header,
@@ -14,7 +13,7 @@ const Header = () => {
         headerNavWrap
     } = classes;
 
-    const headerMenu = menuItems.map(menuItem => {
+    const headerMenu = props.menuItems.map(menuItem => {
         const {
             id,
             path,

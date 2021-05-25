@@ -2,18 +2,20 @@ import React from 'react';
 
 import '../../utils/variables.css';
 import classes from './content.module.scss';
-import {productFields} from "../../state";
+
+import Slider from "../Slider/Slider";
 import ProductCards from "../Pages/ProductCards";
-import MenuItem from "../Header/MenuItem/MenuItem";
 
 
 const Content = props => {
 
         const {
             mainContent,
+            productWrap,
+            sliderBlock
         } = classes;
 
-        const productCards = productFields.map(product => {
+        const productCards = props.productFields.map(product => {
             const {
                 id,
                 path,
@@ -33,10 +35,17 @@ const Content = props => {
             )
         });
 
+
         return (
             <section className={mainContent}>
+                <div className={ sliderBlock }>
+                    <Slider/>
+                </div>
 
-                { productCards }
+                <div className={ productWrap }>
+                    { productCards }
+                </div>
+
 
             </section>
         )

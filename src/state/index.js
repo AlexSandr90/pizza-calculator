@@ -1,11 +1,3 @@
-import {
-    menuItems,
-    menuFields,
-    productFields
-} from './state';
+import state from "./state";
 
-export {
-    menuItems,
-    menuFields,
-    productFields
-};
+export default state;

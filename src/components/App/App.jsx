@@ -21,30 +21,59 @@ import {
     Calculator
 } from "../Pages";
 
-const App = () => {
+const App = props => {
 
     const {
         app_wrap,
         mainContent
     } = classes;
 
+    const {
+        menuItems,
+        menuFields,
+        productFields
+    } = props.state;
+
     return (
         <Router>
             <div className={app_wrap}>
-                <Header/>
+                <Header menuItems={ menuItems } />
                 {/*<Sidebar/>*/}
 
                 <main className={ mainContent }>
 
-                    <Route path='/menu' component={Menu} exact/>
-                    <Route path='/delivery' component={Delivery} exact/>
-                    <Route path='/about' component={About} exact/>
-                    <Route path='/calculator' component={Calculator} eact/>
-                    <Route path='/contacts' component={Contacts} exact/>
-                    <Route path='/' component={Content} exact/>
+                    <Route
+                        path='/menu'
+                        exact
+                        render={ () => <Menu/> }
+                    />
+                    <Route
+                        path='/delivery'
+                        exact
+                        render={ () => <Delivery/> }
+                    />
+                    <Route
+                        path='/about'
+                        exact
+                        render={ () => <About/> }
+                    />
+                    <Route
+                        path='/calculator'
+                        exact
+                        render={ () => <Calculator menuFields={ menuFields }/> }
+                    />
+                    <Route
+                        path='/contacts'
+                        exact
+                        render={ () => <Contacts/> }
+                    />
+                    <Route
+                        path='/'
+                        exact
+                        render={ () => <Content productFields={ productFields } /> }
+                    />
 
                 </main>
-                {/*<Content/>*/}
                 <Footer/>
             </div>
         </Router>
