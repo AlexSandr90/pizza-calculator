@@ -1,13 +1,11 @@
 .mainContent {
   display: grid;
-  //grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 8fr;
 }
 
 .sliderBlock {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //grid-row: 0 / span 1;
 
   height: 250px;
   overflow: hidden;
@@ -18,7 +16,6 @@
 .productWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //grid-row: 2 / span 1;
 }
 
 

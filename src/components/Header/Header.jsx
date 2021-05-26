@@ -13,7 +13,9 @@ const Header = props => {
         headerNavWrap
     } = classes;
 
-    const headerMenu = props.menuItems.map(menuItem => {
+    const { menuItems } = props.state;
+
+    const headerMenu = menuItems.map(menuItem => {
         const {
             id,
             path,

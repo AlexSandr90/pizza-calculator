@@ -5,7 +5,6 @@ import classes from './App.module.scss';
 
 import Header from "../Header";
 import Footer from "../Footer";
-import Sidebar from "../Sidebar";
 import Content from "../Content";
 
 import {
@@ -23,22 +22,17 @@ import {
 
 const App = props => {
 
+    const { app_wrap, mainContent } = classes;
     const {
-        app_wrap,
-        mainContent
-    } = classes;
-
-    const {
-        menuItems,
-        menuFields,
-        productFields
+        menu,
+        products,
+        headerMenu
     } = props.state;
 
     return (
         <Router>
             <div className={app_wrap}>
-                <Header menuItems={ menuItems } />
-                {/*<Sidebar/>*/}
+                <Header state={ headerMenu } />
 
                 <main className={ mainContent }>
 
@@ -60,7 +54,7 @@ const App = props => {
                     <Route
                         path='/calculator'
                         exact
-                        render={ () => <Calculator menuFields={ menuFields }/> }
+                        render={ () => <Calculator state={ menu }/> }
                     />
                     <Route
                         path='/contacts'
@@ -70,7 +64,7 @@ const App = props => {
                     <Route
                         path='/'
                         exact
-                        render={ () => <Content productFields={ productFields } /> }
+                        render={ () => <Content state={ products } /> }
                     />
 
                 </main>

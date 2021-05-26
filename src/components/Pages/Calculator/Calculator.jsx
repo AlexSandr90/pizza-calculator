@@ -27,6 +27,8 @@ const Calculator = props => {
         priceBlock
     } = classes;
 
+    const { menuFields } = props.state;
+
     const handleCost = (event, setHook) => {
         if ( event.target.value === '35' ) {
             setHook(SMALL_BASE);
@@ -44,7 +46,7 @@ const Calculator = props => {
     };
 
 
-    const listItem = props.menuFields.map((item) => {
+    const listItem = menuFields.map((item) => {
 
         const {
             id,
@@ -110,13 +112,13 @@ const Calculator = props => {
                     <span>Количество порций</span>
                 </li>
 
-                <li key={ props.menuFields[0].id } className={ listItem }>
-                    <span>{ props.menuFields[0].ingredient }</span>
-                    <span>{ props.menuFields[0].priceToOne }</span>
-                    <span>{ props.menuFields[0].since }</span>
+                <li key={ menuFields[0].id } className={ listItem }>
+                    <span>{ menuFields[0].ingredient }</span>
+                    <span>{ menuFields[0].priceToOne }</span>
+                    <span>{ menuFields[0].since }</span>
                     <select
-                        name={ props.menuFields[0].selectName }
-                        id={ props.menuFields[0].selectId }
+                        name={ menuFields[0].selectName }
+                        id={ menuFields[0].selectId }
                         value={ useHam }
                         onChange={ event => setUseHam(event.target.value) }
                     >
@@ -128,13 +130,13 @@ const Calculator = props => {
                     </select>
                 </li>
 
-                <li key={ props.menuFields[1].id } className={ listItem }>
-                    <span>{ props.menuFields[1].ingredient }</span>
-                    <span>{ props.menuFields[1].priceToOne }</span>
-                    <span>{ props.menuFields[1].since }</span>
+                <li key={ menuFields[1].id } className={ listItem }>
+                    <span>{ menuFields[1].ingredient }</span>
+                    <span>{ menuFields[1].priceToOne }</span>
+                    <span>{ menuFields[1].since }</span>
                     <select
-                        name={ props.menuFields[1].selectName }
-                        id={ props.menuFields[1].selectId }
+                        name={ menuFields[1].selectName }
+                        id={ menuFields[1].selectId }
                         value={ usePineapple }
                         onChange={ event => setUsePineapple(event.target.value) }
                     >
@@ -146,13 +148,13 @@ const Calculator = props => {
                     </select>
                 </li>
 
-                <li key={ props.menuFields[2].id } className={ listItem }>
-                    <span>{ props.menuFields[2].ingredient }</span>
-                    <span>{ props.menuFields[2].priceToOne }</span>
-                    <span>{ props.menuFields[2].since }</span>
+                <li key={ menuFields[2].id } className={ listItem }>
+                    <span>{ menuFields[2].ingredient }</span>
+                    <span>{ menuFields[2].priceToOne }</span>
+                    <span>{ menuFields[2].since }</span>
                     <select
-                        name={ props.menuFields[2].selectName }
-                        id={ props.menuFields[2].selectId }
+                        name={ menuFields[2].selectName }
+                        id={ menuFields[2].selectId }
                         value={ useCheese }
                         onChange={ event => setUseCheese(event.target.value) }
                     >

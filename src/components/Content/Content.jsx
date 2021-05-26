@@ -15,7 +15,10 @@ const Content = props => {
             sliderBlock
         } = classes;
 
-        const productCards = props.productFields.map(product => {
+
+        const { productFields } = props.state;
+
+        const productCards = productFields.map(product => {
             const {
                 id,
                 path,
