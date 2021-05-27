@@ -19,6 +19,8 @@ import {
     Contacts,
     Calculator
 } from "../Pages";
+import Card from "../Pages/ProductCards/Card";
+
 
 const App = props => {
 
@@ -67,6 +69,7 @@ const App = props => {
                         render={ () => <Content state={ products } /> }
                     />
 
+                    <Route path={`/${products.productFields.path}`} exact render={ () => <Card/> }/>
                 </main>
                 <Footer/>
             </div>
