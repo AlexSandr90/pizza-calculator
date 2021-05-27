@@ -69,7 +69,7 @@ const App = props => {
                         render={ () => <Content state={ products } /> }
                     />
 
-                    <Route path={`/${products.productFields.path}`} exact render={ () => <Card/> }/>
+                    <Route path={`/:${products.productFields.path}`} exact render={ () => <Card/> }/>
                 </main>
                 <Footer/>
             </div>

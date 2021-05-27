@@ -1,12 +1,12 @@
 import React from 'react';
 
-
 import '../../../utils/variables.css';
 import classes from './productCards.module.scss'
-import {NavLink} from "react-router-dom";
+import {NavLink, withRouter} from "react-router-dom";
 
 const ProductCards = props => {
 
+    console.log('ProductCards props: ', props);
     const {
         id,
         path,
@@ -22,7 +22,11 @@ const ProductCards = props => {
     } = classes;
 
     return (
-        <div className={productCard} key={ id }>
+        <div
+            className={productCard}
+            key={ id }
+            onClick={ () => props.history.push(`/${path}`) }
+        >
             <NavLink
                 className={ productCardLink }
                 to={`/${path}`}
@@ -39,4 +43,4 @@ const ProductCards = props => {
     )
 };
 
-export default ProductCards;
+export default withRouter(ProductCards);
