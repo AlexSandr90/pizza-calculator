@@ -9,6 +9,7 @@ import Content from "../Content";
 
 import {
     Route,
+    Switch,
     BrowserRouter as Router
 } from "react-router-dom";
 
@@ -24,7 +25,7 @@ import Card from "../Pages/ProductCards/Card";
 
 const App = props => {
 
-    const { app_wrap, mainContent } = classes;
+    const {app_wrap, mainContent} = classes;
     const {
         menu,
         products,
@@ -34,42 +35,45 @@ const App = props => {
     return (
         <Router>
             <div className={app_wrap}>
-                <Header state={ headerMenu } />
+                <Header state={headerMenu}/>
 
-                <main className={ mainContent }>
+                <main className={mainContent}>
+                    <Switch>
+                        <Route
+                            path='/menu'
 
-                    <Route
-                        path='/menu'
-                        exact
-                        render={ () => <Menu/> }
-                    />
-                    <Route
-                        path='/delivery'
-                        exact
-                        render={ () => <Delivery/> }
-                    />
-                    <Route
-                        path='/about'
-                        exact
-                        render={ () => <About/> }
-                    />
-                    <Route
-                        path='/calculator'
-                        exact
-                        render={ () => <Calculator state={ menu }/> }
-                    />
-                    <Route
-                        path='/contacts'
-                        exact
-                        render={ () => <Contacts/> }
-                    />
-                    <Route
-                        path='/'
-                        exact
-                        render={ () => <Content state={ products } /> }
-                    />
+                            render={() => <Menu/>}
+                        />
+                        <Route
+                            path='/delivery'
 
-                    <Route path={`/:${products.productFields.path}`} exact render={ () => <Card/> }/>
+                            render={() => <Delivery/>}
+                        />
+                        <Route
+                            path='/about'
+
+                            render={() => <About/>}
+                        />
+                        <Route
+                            path='/calculator'
+
+                            render={() => <Calculator state={menu}/>}
+                        />
+                        <Route
+                            path='/contacts'
+
+                            render={() => <Contacts/>}
+                        />
+                        <Route
+                            path='/'
+                            exact
+                            render={() => <Content state={products}/>}
+                        />
+
+                        {/*<Route path={`/:name`} exact render={() => <Card state={products}/>}/>*/}
+                        {/*<Route path={`/:${products.productFields.path}`} exact render={ () => <Card state={ products } /> }/>*/}
+
+                    </Switch>
                 </main>
                 <Footer/>
             </div>
