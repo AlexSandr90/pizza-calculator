@@ -3,8 +3,8 @@ import React from 'react';
 import '../../utils/variables.css';
 import classes from './content.module.scss';
 
-import Slider from "../Slider/Slider";
-import ProductCard from "../Pages/ProductCard";
+import Slider from "../slider/Slider";
+import ProductCard from "../productCard";
 
 
 const Content = props => {

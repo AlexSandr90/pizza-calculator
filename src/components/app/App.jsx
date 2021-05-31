@@ -3,9 +3,9 @@ import React from 'react';
 import '../../utils/variables.css';
 import classes from './App.module.scss';
 
-import Header from "../Header";
-import Footer from "../Footer";
-import Content from "../Content";
+import Header from "../header";
+import Footer from "../footer";
+import Content from "../content";
 
 import {
     Route,
@@ -13,15 +13,12 @@ import {
     BrowserRouter as Router
 } from "react-router-dom";
 
-import {
-    Menu,
-    About,
-    Delivery,
-    Contacts,
-    Calculator
-} from "../Pages";
-import Card from "../Pages/ProductCard/Card";
-import ProductCard from "../Pages/ProductCard";
+import ProductCard from "../productCard";
+import Menu from "../menu";
+import Delivery from "../delivery";
+import About from "../about";
+import Calculator from "../calculator";
+import Contacts from "../contacts";
 
 
 const App = props => {
@@ -66,10 +63,7 @@ const App = props => {
                             render={() => <Content state={products}/>}
                         />
 
-                        {/*<Route path={`/:id`} children={ProductCards} />*/}
                         <Route path={`/:name`} exact render={() => <ProductCard state={products}/>}/>
-                        {/*<Route path={`/:${products.productFields.path}`} exact render={ () => <Card state={ products } /> }/>*/}
-
                     </Switch>
                 </main>
                 <Footer/>

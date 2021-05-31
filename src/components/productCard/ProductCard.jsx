@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../../utils/variables.css';
+import '../../utils/variables.css';
 import classes from './productCards.module.scss'
 import {
     NavLink,

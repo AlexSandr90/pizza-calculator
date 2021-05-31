@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import '../../../utils/variables.css';
-import classes from '../pages.module.scss';
-import Ingredients from "./Ingredients";
+import '../../utils/variables.css';
+import classes from './calculator.module.scss';
+import Ingredients from "../ingredients";
 
 import {
     BIG_BASE,
     SMALL_BASE,
     MEDIUM_BASE
-} from "../../../utils/constants";
+} from "../../utils/constants";
 
 const Calculator = props => {
 

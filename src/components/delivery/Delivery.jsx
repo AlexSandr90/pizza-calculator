@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './pages.module.scss';
+import classes from './delivery.module.scss';
 
 const Delivery = () => {
 
