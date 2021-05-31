@@ -2,18 +2,30 @@ import React from 'react';
 
 import '../../../utils/variables.css';
 import classes from './productCards.module.scss'
-import {NavLink, withRouter} from "react-router-dom";
+import {
+    NavLink,
+    useLocation
+} from "react-router-dom";
 
-const ProductCards = props => {
+const ProductCard = props => {
 
-    console.log('ProductCards props: ', props);
+    let location = useLocation();
+    const currentPath = Number(location.pathname.slice(1));
+    let currentProps;
+
+    if ( location.pathname === '/' ) {
+        currentProps = props;
+    } else {
+        currentProps = props.state.productFields[currentPath];
+    }
+
     const {
         id,
         path,
         imgSrc,
         productName,
         productPrice
-    } = props;
+    } = currentProps;
 
     const {
         productCard,
@@ -25,11 +37,13 @@ const ProductCards = props => {
         <div
             className={productCard}
             key={ id }
-            onClick={ () => props.history.push(`/${path}`) }
         >
             <NavLink
                 className={ productCardLink }
-                to={`/${path}`}
+                to={ {
+                    pathname: `/${path}`,
+                    state: location
+                } }
                 exact
             >
                 <img src={imgSrc} alt={ productName }/>
@@ -43,4 +57,4 @@ const ProductCards = props => {
     )
 };
 
-export default withRouter(ProductCards);
+export default ProductCard;

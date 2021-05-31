@@ -4,7 +4,7 @@ import '../../utils/variables.css';
 import classes from './content.module.scss';
 
 import Slider from "../Slider/Slider";
-import ProductCards from "../Pages/ProductCards";
+import ProductCard from "../Pages/ProductCard";
 
 
 const Content = props => {
@@ -28,7 +28,7 @@ const Content = props => {
             } = product;
 
             return (
-                <ProductCards
+                <ProductCard
                     key={ id }
                     path={ path }
                     imgSrc={ imgSrc }

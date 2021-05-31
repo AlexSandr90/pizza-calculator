@@ -20,7 +20,8 @@ import {
     Contacts,
     Calculator
 } from "../Pages";
-import Card from "../Pages/ProductCards/Card";
+import Card from "../Pages/ProductCard/Card";
+import ProductCard from "../Pages/ProductCard";
 
 
 const App = props => {
@@ -38,30 +39,25 @@ const App = props => {
                 <Header state={headerMenu}/>
 
                 <main className={mainContent}>
-                    <Switch>
+                    <Switch >
                         <Route
                             path='/menu'
-
                             render={() => <Menu/>}
                         />
                         <Route
                             path='/delivery'
-
                             render={() => <Delivery/>}
                         />
                         <Route
                             path='/about'
-
                             render={() => <About/>}
                         />
                         <Route
                             path='/calculator'
-
                             render={() => <Calculator state={menu}/>}
                         />
                         <Route
                             path='/contacts'
-
                             render={() => <Contacts/>}
                         />
                         <Route
@@ -70,7 +66,8 @@ const App = props => {
                             render={() => <Content state={products}/>}
                         />
 
-                        {/*<Route path={`/:name`} exact render={() => <Card state={products}/>}/>*/}
+                        {/*<Route path={`/:id`} children={ProductCards} />*/}
+                        <Route path={`/:name`} exact render={() => <ProductCard state={products}/>}/>
                         {/*<Route path={`/:${products.productFields.path}`} exact render={ () => <Card state={ products } /> }/>*/}
 
                     </Switch>
