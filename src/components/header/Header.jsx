@@ -2,7 +2,8 @@ import React from 'react';
 
 import '../../utils/variables.css';
 import classes from './header.module.scss';
-import MenuItem from "./MenuItem/MenuItem";
+import MenuItem from "../menuItem";
+
 
 const Header = props => {
 
@@ -21,6 +22,7 @@ const Header = props => {
             path,
             menuItemName
         } = menuItem;
+
         return (
             <MenuItem
                 key={ id }

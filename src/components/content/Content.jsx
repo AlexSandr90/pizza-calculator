@@ -3,7 +3,7 @@ import React from 'react';
 import '../../utils/variables.css';
 import classes from './content.module.scss';
 
-import Slider from "../slider/Slider";
+import Slider from "../slider";
 import ProductCard from "../productCard";
 
 
